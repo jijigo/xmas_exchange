@@ -45,7 +45,12 @@ function Draw (props) {
 	}
 
 	const next = () => {
-		const getNextAttendee = attendeeList.find(e => e.id === activeAttendee.match)
+		const getMatchAttendee = attendeeList.find(e => e.id === activeAttendee.match)
+		const getUnfinished = attendeeList.filter(e => !e.isFinished)
+		const getNextAttendee = getMatchAttendee.isFinished
+			? getUnfinished[Math.floor(Math.random() * getUnfinished.length)]
+			: getMatchAttendee
+
 		setActiveAttendee({
 			...getNextAttendee
 		})
@@ -72,8 +77,10 @@ function Draw (props) {
 						{
 							isAllFinished() ? (
 								<>
-									<p>抽完囉</p>
-									<button>查看結果</button>
+									<p>
+										<span role="img" aria-label="">抽完囉 🎉</span>
+									</p>
+									{/* <button>查看結果</button> */}
 								</>
 							) : (
 								<button type="button" onClick={() => next()}>下一位</button>
