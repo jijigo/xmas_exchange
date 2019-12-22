@@ -1,17 +1,16 @@
 import React from 'react';
 import './App.css';
 
-
 import Main from './components/Main'
 
 function App() {
   return (
     <div className="App">
-      <header> exchanging </header>
+      <header>
+        抽交換禮物程式喔喔喔
+      </header>
 
-      <div className="App-header">
-        <Main />
-      </div>
+      <Main />
 
       <footer />
     </div>

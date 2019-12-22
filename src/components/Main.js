@@ -6,7 +6,7 @@ import Draw from './Draw'
 // container
 function Main () {
 
-	const [total, setTotal] = useState(0);
+	const [total, setTotal] = useState(2);
 	const [step, setStep] = useState(1);
 	const [isStarted, setStarted] = useState(false);
 	const [attendee, setAttendee] = useState([{id: 1, name: '1號'}]);
@@ -24,14 +24,28 @@ function Main () {
 		setStep(step)
 	}
 
+	const containerStyle = {
+		height: 'calc(100vh - 150px)',
+    display: 'flex',
+    textAlign: 'center',
+    flexDirection: 'column',
+		justifyContent: 'center',
+		width: '100%'
+	}
+
 	return (
-    <div>
+    <div style={containerStyle}>
 			{
 				!isStarted ? (
 					step === 1 ? (
 						<Step1 total={total} setTotal={setTotal} setStep={handleSetStep}/>
 					) : (
-						<Step2 attendee={attendee} setStarted={setStarted} setAttendee={setAttendee}/>
+						<Step2
+							attendee={attendee}
+							setStarted={setStarted}
+							setAttendee={setAttendee}
+							setStep={handleSetStep}
+						/>
 					)
 				) : (
 					<Draw attendee={attendee} />

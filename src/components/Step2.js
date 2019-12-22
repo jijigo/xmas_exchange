@@ -12,26 +12,37 @@ function Step2 (props) {
 		}));
 	}
 
-	// const handleChangeInput = (e, id) => {
-	// 	const index = attendee.findIndex(e => e.id === id)
-	// 	attendee[index].name = e.target.value
-	// 	// console.log('e', e.target.value, id)
-	// }
+	const listStyle = {
+		maxHeight: '250px',
+		overflow: 'auto'
+	}
 
 	return (
 		<>
-			<p>設定中</p>
-			<div>
+			<p>寫上名字</p>
+			<div style={listStyle}>
 				{props.attendee.map((element, index) => {
 					return (
 						<div key={index}>
-							<input value={element.name} onChange={handleChange(element)}/>
+							<input
+								style={{ marginBottom: '8px' }}
+								value={element.name}
+								onChange={handleChange(element)}/>
 						</div>
 					)
 				}
 				)}
 			</div>
-			<button type="button" onClick={() => props.setStarted(true)}>設定完成</button>
+
+			<div>
+				<button
+					style={{ marginRight: '10px' }}
+					onClick={() => props.setStep(1)}>返回</button>
+				<button type="button"
+					style={{ marginTop: '50px' }}
+					onClick={() => props.setStarted(true)}>設定完成</button>
+			</div>
+
 		</>
 	)
 }

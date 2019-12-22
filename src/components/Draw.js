@@ -52,24 +52,31 @@ function Draw (props) {
 		setShowResult(false)
 	}
 
+	const titleStyle = {
+		maxWidth: '300px',
+    margin: '0 auto 1em'
+	}
+
 	return (
 		<>
 			{
 				!showResult ? (
 					<>
-						<p>請 {activeAttendee.name} 抽獎</p>
+						<p style={titleStyle}>請 {activeAttendee.name} 抽獎</p>
 						<button type="button" onClick={() => draw()}>開始抽獎</button>
 					</>
 				) : (
 					<>
-						<p>恭喜 {activeAttendee.name} 抽到的是</p>
+						<p style={titleStyle}>恭喜 {activeAttendee.name} 抽到的是</p>
 						<h2>{attendeeList.find(e => e.id === activeAttendee.match).name}</h2>
 						{
 							isAllFinished() ? (
-								// <button>查看結果</button>
-								<p>抽完囉</p>
+								<>
+									<p>抽完囉</p>
+									<button>查看結果</button>
+								</>
 							) : (
-								<button type="button" onClick={() => next()}>繼續抽獎</button>
+								<button type="button" onClick={() => next()}>下一位</button>
 							)
 						}
 					</>
