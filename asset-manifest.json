@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/xmas_exchange/static/css/main.e8240efd.chunk.css",
-    "main.js": "/xmas_exchange/static/js/main.ce86b999.chunk.js",
-    "main.js.map": "/xmas_exchange/static/js/main.ce86b999.chunk.js.map",
+    "main.js": "/xmas_exchange/static/js/main.1c06cbad.chunk.js",
+    "main.js.map": "/xmas_exchange/static/js/main.1c06cbad.chunk.js.map",
     "runtime-main.js": "/xmas_exchange/static/js/runtime-main.40dbf353.js",
     "runtime-main.js.map": "/xmas_exchange/static/js/runtime-main.40dbf353.js.map",
     "static/js/2.2b601f37.chunk.js": "/xmas_exchange/static/js/2.2b601f37.chunk.js",
     "static/js/2.2b601f37.chunk.js.map": "/xmas_exchange/static/js/2.2b601f37.chunk.js.map",
     "index.html": "/xmas_exchange/index.html",
-    "precache-manifest.f5a36165a26b8cae07a48b8e3cd89586.js": "/xmas_exchange/precache-manifest.f5a36165a26b8cae07a48b8e3cd89586.js",
+    "precache-manifest.de5050e725cbadd4186307254c677944.js": "/xmas_exchange/precache-manifest.de5050e725cbadd4186307254c677944.js",
     "service-worker.js": "/xmas_exchange/service-worker.js",
     "static/css/main.e8240efd.chunk.css.map": "/xmas_exchange/static/css/main.e8240efd.chunk.css.map",
     "static/js/2.2b601f37.chunk.js.LICENSE": "/xmas_exchange/static/js/2.2b601f37.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.40dbf353.js",
     "static/js/2.2b601f37.chunk.js",
     "static/css/main.e8240efd.chunk.css",
-    "static/js/main.ce86b999.chunk.js"
+    "static/js/main.1c06cbad.chunk.js"
   ]
 }
